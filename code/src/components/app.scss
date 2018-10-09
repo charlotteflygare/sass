@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800');
+$font-stack: 'Raleway', sans-serif;
+$input-bg: #ffffff;
+$primary-color: #d81939;
+$font-color: #003d50;
+$border-color: #C3C3C3;
+
+
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: $primary-color;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header img {
+    width: 15%;
+    height: auto;
+    margin-right: 60px;
+}
+
+.heroImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.heroImage img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 800px;
+  height: 250px;
+  background-color: #e3e3e3;
+  z-index: 2;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  right: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.destinationContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.flyContainer {
+  margin-top: 15px;
+  width: 400px;
+  padding-left: 20px;
+}
+
+.flyBorder {
+  width: 365px;
+  height: 50px;
+  border-bottom: 3px solid $border-color;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 350px;
+  height: 40px;
+  font-size: 16px;
+  background-color: $input-bg;
+  padding-left: 10px;
+}
+
+h4 {
+    color: $font-color;
+    font-family: $font-stack;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+}
+
+::placeholder {
+  color: $font-color;
+  font-family: $font-stack;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 400px;
+  padding-left: 20px;
+}
+
+
+  p {
+    font-family: $font-stack;
+    color: $input-bg;
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+    padding-top: 5px;
+  }
+
+button {
+  width: 175px;
+  background-color: $primary-color;
+  height: 45px;
+}
+
+span {
+  height: 48px;
+  width: 175px;
+  border-bottom: 3px solid $font-color;
+}
+
+
+.link a {
+  color: $font-color;
+  font-family: $font-stack;
+  font-size: 14px;
+  line-height: 1;
+  border-bottom: 2px dotted $font-color;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
+
+a {
+  font-family: $font-stack;
+  border-bottom: 2px dotted #d8d8d8;
+  line-height: 1;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
