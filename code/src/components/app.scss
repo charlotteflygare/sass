@@ -4,23 +4,61 @@ $input-bg: #ffffff;
 $primary-color: #d81939;
 $font-color: #003d50;
 $border-color: #C3C3C3;
+$border-color_grey: #d8d8d8;
+$standard-width: 100%;
+
+.tab-menu-fly {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  top: -20%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  background-color: #e3e3e3;
+  font-weight: bold;
+p {
+  color: $font-color;
+}
+}
+
+.tab-menu-flyhotel {
+  @extend.tab-menu-fly;
+  left: 104px;
+  width: 120px;
+  background-color: $font-color;
+p {
+color: $input-bg;
+}
+}
+
+ .tab-menu-rental {
+  @extend.tab-menu-flyhotel;
+  left: 228px;
+}
+ .tab-menu-hotel {
+  @extend.tab-menu-flyhotel;
+  left: 352px;
+}
+
 
 
 .header {
   height: 80px;
-  width: 100%;
+  width: $standard-width;
   background-color: $primary-color;
   z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-}
-
-.header img {
+ img {
     width: 15%;
     height: auto;
     margin-right: 60px;
+}
 }
 
 .heroImage {
@@ -29,26 +67,29 @@ $border-color: #C3C3C3;
   background-size: cover;
   position: relative;
   z-index: 0;
-}
-
-.heroImage img {
-  width: 100%;
+ img {
+  width: $standard-width;
   height: auto;
+}
 }
 
 .container {
   width: 800px;
   height: 250px;
   background-color: #e3e3e3;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
-  top: 20%;
-  left: 20%;
-  right: 20%;
+  // top: 20%;
+  // left: 20%;
+  // bottom: 0;
+  // right: 20%;
+  left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .destinationContainer {
@@ -135,7 +176,7 @@ span {
 
 a {
   font-family: $font-stack;
-  border-bottom: 2px dotted #d8d8d8;
+  border-bottom: 2px dotted $border-color_grey;
   line-height: 1;
   margin-bottom: 0px;
   padding-bottom: 2px;
