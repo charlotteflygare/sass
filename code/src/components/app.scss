@@ -6,6 +6,7 @@ $font-color: #003d50;
 $border-color: #C3C3C3;
 $border-color_grey: #d8d8d8;
 $standard-width: 100%;
+$container-color: #e3e3e3;
 
 .tab-menu-fly {
   height: 50px;
@@ -17,11 +18,11 @@ $standard-width: 100%;
   justify-content: center;
   align-items: center;
   margin-right: 5px;
-  background-color: #e3e3e3;
+  background-color: $container-color;
   font-weight: bold;
-p {
-  color: $font-color;
-}
+  p {
+    color: $font-color;
+  }
 }
 
 .tab-menu-flyhotel {
@@ -29,9 +30,9 @@ p {
   left: 104px;
   width: 120px;
   background-color: $font-color;
-p {
-color: $input-bg;
-}
+  p {
+  color: $input-bg;
+  }
 }
 
  .tab-menu-rental {
@@ -42,8 +43,6 @@ color: $input-bg;
   @extend.tab-menu-flyhotel;
   left: 352px;
 }
-
-
 
 .header {
   height: 80px;
@@ -58,7 +57,7 @@ color: $input-bg;
     width: 15%;
     height: auto;
     margin-right: 60px;
-}
+  }
 }
 
 .heroImage {
@@ -70,22 +69,18 @@ color: $input-bg;
  img {
   width: $standard-width;
   height: auto;
-}
+  }
 }
 
 .container {
   width: 800px;
   height: 250px;
-  background-color: #e3e3e3;
+  background-color: $container-color;
   z-index: 4;
   position: absolute;
-  // top: 20%;
-  // left: 20%;
-  // bottom: 0;
-  // right: 20%;
   left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -110,6 +105,39 @@ transform: translate(-50%, -50%);
   margin-bottom: 5px;
 }
 
+::placeholder {
+  color: $font-color;
+  font-family: $font-stack;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 400px;
+  padding-left: 20px;
+}
+
+.link a {
+  color: $font-color;
+  font-family: $font-stack;
+  font-size: 14px;
+  line-height: 1;
+  border-bottom: 2px dotted $font-color;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
+
+p {
+  font-family: $font-stack;
+  color: $input-bg;
+  font-size: 16px;
+  text-align: center;
+  margin: 0px;
+  padding-top: 5px;
+}
+
 input {
   width: 350px;
   height: 40px;
@@ -127,30 +155,6 @@ h4 {
     margin-top: 0px;
 }
 
-::placeholder {
-  color: $font-color;
-  font-family: $font-stack;
-}
-
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  width: 400px;
-  padding-left: 20px;
-}
-
-
-  p {
-    font-family: $font-stack;
-    color: $input-bg;
-    font-size: 16px;
-    text-align: center;
-    margin: 0px;
-    padding-top: 5px;
-  }
-
 button {
   width: 175px;
   background-color: $primary-color;
@@ -161,17 +165,6 @@ span {
   height: 48px;
   width: 175px;
   border-bottom: 3px solid $font-color;
-}
-
-
-.link a {
-  color: $font-color;
-  font-family: $font-stack;
-  font-size: 14px;
-  line-height: 1;
-  border-bottom: 2px dotted $font-color;
-  margin-bottom: 0px;
-  padding-bottom: 2px;
 }
 
 a {
